@@ -1,0 +1,295 @@
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+body {
+    background-color: white;
+    font-family: 'Open Sans';
+    font-size: 16px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+
+    p, h1 {
+        color: hsl(243, 87%, 12%);
+    }
+
+    .header, h1, h2 {
+        font-family: 'Raleway';
+    }
+    
+    input[type="button"] {
+        background-color: hsl(224, 93%, 58%);
+        border-color: hsl(224, 93%, 58%);
+        color: hsl(240, 75%, 98%);
+        font-family: 'Open Sans';
+        border-radius: 2px;
+        font-weight: 600;
+    }
+
+    input[type="button"]:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    input[type="text"] {
+        display: block;
+        font-family: 'Open Sans';
+        color: transparent;
+        background-color: transparent;
+        border: none;
+    }
+
+    form:invalid {
+        input[type="text"] {
+            color: red;
+        }
+
+        input[type="text"]:nth-of-type(2) {
+            color:hsl(240, 75%, 98%);
+        }
+
+        input:invalid {
+            border: 1px solid red;
+        }
+    }
+}
+
+.header {
+    padding: 40px 0px 80px 0px;
+
+    img {
+        padding-left: 40px;
+    }
+
+    li {
+        display: inline;
+        position: relative;
+        bottom: 40px;
+        left: 1100px;
+        margin-right: 50px;
+    }
+}
+
+.files {
+    grid-row: 2 / span 1;
+    margin-bottom: -100px;
+
+    h1 {
+        padding: 0px 0px 20px 40px;
+    }
+
+    p {
+        padding: 0px 0px 20px 40px;
+    }
+
+    form {
+        padding-left: 40px;
+    }
+
+    input[type=email] {
+        height: 35px; 
+        padding-left: 10px;
+    }
+
+    input[type=button] {
+        width: 150px;
+        padding: 5px 5px 6px 5px;
+    }
+
+    img {
+        width: 500px;
+        position: relative;
+        bottom: 250px;
+        left: 800px;
+    }
+}
+
+.productive {
+    grid-row: 3 / span 1;
+    background: url(images/bg-curve-desktop.svg) no-repeat top;
+    background-size: cover;
+    padding-top: 80px;
+    margin-bottom: -300px;
+
+    .description {
+        width: fit-content;
+        margin-left: 40px;
+
+        h1 {
+            padding-bottom: 30px;
+        }
+
+        p:first-of-type, p:nth-of-type(2) {
+            padding-bottom: 10px;
+        }
+
+        a {
+            color: hsl(170, 45%, 43%);
+            text-underline-offset: 5px;
+
+            img {
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        a:hover {
+            filter: brightness(140%);
+            cursor: pointer;
+        }
+    }
+
+    .review {
+        background-color: white;
+        border-radius: 5px;
+        width: 350px;
+        margin: 40px 0px 0px 40px;
+        padding-left: 30px;
+
+        img:first-of-type {
+            width: 20px;
+            padding: 20px 0px 10px 0px;
+        }
+
+        p:first-of-type {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .name-title {
+            line-height: normal;
+            width: fit-content;
+            float: right;
+            margin: 5px 150px 0px 0px;
+
+            p:first-of-type {
+                font-weight: 700;
+            }
+
+            p:nth-of-type(2) {
+                font-size: 11px;
+            }
+        }
+
+        img:nth-of-type(2) {
+            width: 40px;
+            border-radius: 50%;
+            padding-top: 5px;
+        }
+    }
+
+    .illustration-2 {
+        width: 500px;
+        position: relative;
+        bottom: 430px;
+        left: 800px;
+    }
+}
+
+.access {
+    grid-row: 4 / span 1;
+    background-color: hsl(238, 22%, 44%);
+    padding: 80px 0px 80px 0px;
+    margin-bottom: -80px;
+
+    p, h2 {
+        color:hsl(240, 75%, 98%);
+        padding-left: 40px;
+    }
+
+    h2 {
+        padding-bottom: 20px;
+    }
+
+    input[type=email] {
+        height: 40px; 
+        padding-left: 10px;
+    }
+
+    input[type=button] {
+        width: 170px;
+        padding: 8px 5px 10px 5px;
+        display: block;
+        margin-top: 15px;
+    }
+
+    form {
+        position: relative;
+        bottom: 100px;
+        left: 800px;
+    }
+}
+
+.footer {
+    grid-row: 5 / span 1;
+    background-color: hsl(243, 87%, 12%);
+    padding-top: 80px;
+
+    .logo {
+        filter: brightness(0) invert(1);
+        padding-left: 40px;
+    }
+
+    .phone-icon, .email-icon {
+        width: 300px;
+        padding: 10px 0px 0px 40px;
+        img {
+            float: left;
+            margin-right: 15px;
+        }
+    }
+
+    p, li, .social-media {
+        color:hsl(240, 75%, 98%); 
+    }
+
+    ul {
+        list-style-type: none;
+        width: fit-content;
+    }
+
+    ul:first-of-type{
+        position: relative;
+        left: 500px;
+        bottom: 65px;
+    }
+
+    ul:nth-of-type(2) {
+        position: relative;
+        left: 800px;
+        bottom: 189px;
+    }
+
+    li {
+        padding-bottom: 10px;
+    }
+
+    li:hover, .fa-facebook:hover, .fa-twitter:hover, .fa-instagram:hover {
+        color: hsl(224, 93%, 58%);
+        cursor: pointer;
+    }
+
+    .social-media {
+        font-size: 25px;
+        width: fit-content;
+        position: relative;
+        left: 1100px;
+        bottom: 290px;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+
+    a { 
+        color: hsl(228, 45%, 44%); 
+    }
+}
+
